@@ -1,0 +1,148 @@
+.navOpen {
+  overflow: hidden;
+}
+
+.wrapper {
+  transition-duration: 0.5s;
+  transition-timing-function: swing;
+  background-color: $background-colour;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding: 1% 4%;
+  border-radius: 5px;
+  @extend .z-depth-2;
+
+  &.open {
+    transform: translateX(250px)  translateY(50px);
+    -webkit-transform: translateX(250px)  translateY(50px);
+    box-shadow: 0 0 50px fade(black, 20%);
+  }
+
+  section {
+    max-width: 600px;
+    margin: 0 auto;
+
+    h1 {
+      font-weight: 300;
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-weight: 300;
+      font-size: 20px;
+      margin-bottom: 40px;
+    }
+
+    p {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.openNav {
+  transition-duration: 0.5s;
+  transition-timing-function: swing;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 9;
+  border-radius: 5px;
+  background-color: $primary-colour-dark;
+
+  &:hover {
+    cursor: pointer;
+    @extend .z-depth-2;
+  }
+
+  .icon {
+    transition-duration: 0.2s;
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background-color: white;
+    top: 24px;
+    left: 10px;
+
+    &:before, &:after {
+      transition-duration: 0.5s;
+      background-color: white;
+      position: absolute;
+      content: "";
+      width: 30px;
+      height: 2px;
+      left: 0px;
+    }
+
+    &:before {
+      top: -7px;
+    }
+
+    &:after {
+      top: 7px;
+    }
+  }
+
+  &.open {
+    transform: translateX(250px) translateY(50px);
+    -webkit-transform: translateX(250px) translateY(50px);
+
+    .icon {
+      background-color: transparent;
+
+      &:before, &:after {
+        top: 0;
+      }
+
+      &:before {
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+      }
+
+      &:after {
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+      }
+    }
+  }
+}
+
+nav {
+  background-color: $primary-colour-dark;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  ul {
+    width: 250px;
+    margin-top: 50px;
+
+    &:hover {
+      li a {
+        color: fade(white, 50%);
+      }
+    }
+
+    li a {
+      transition-duration: 0.25s;
+      display: block;
+      padding: 5px 40px;
+      color: #dddddd;
+      letter-spacing: 0.02em;
+      text-align: right;
+
+      &:hover {
+        cursor: pointer;
+        color: #ffffff;
+      }
+    }
+  }
+
+  &.open {
+  }
+}
