@@ -10,7 +10,20 @@ function Page(id, path, element, name) {
 
 var pages = [
   new Page(0, "./html/header.html", "header", "Header"),
-  new Page(2, "./html/footer.html", "footer", "Footer"),
+  new Page(1, "./html/1people.html", "1people", "People and cleavages"),
+  new Page(2, "./html/2government.html", "2government", "Government and institutions"),
+  new Page(3, "./html/3history.html", "3history", "History and change"),
+  new Page(4, "./html/4rights.html", "4rights", "Civil rights and liberties"),
+  new Page(5, "./html/5legitimacy.html", "5legitimacy", "Government legitimacy"),
+  new Page(6, "./html/6civil.html", "6civil", "Civil rights, liberties, and youth"),
+  new Page(7, "./html/7parties.html", "7parties", "Parties and elections"),
+  new Page(8, "./html/8domestic.html", "8domestic", "Domestic policy + HDI, Gini"),
+  new Page(9, "./html/9economics.html", "9economics", "Economic system / change"),
+  new Page(10, "./html/10foreign.html", "10foreign", "Foreign policy / US"),
+  new Page(11, "./html/11media.html", "11media", "Public optinion / media"),
+  new Page(12, "./html/12events.html", "12events", "Current events"),
+  new Page(13, "./html/13future.html", "13future", "Future / Questions"),
+  new Page(14, "./html/footer.html", "footer", "Footer"),
 ];
 var pagesHeight = 0;
 
