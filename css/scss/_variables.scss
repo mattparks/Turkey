@@ -4,7 +4,7 @@ $primary-colour: colour("red", "base") !default;
 $primary-colour-light: lighten($primary-colour, 15%) !default;
 $primary-colour-dark: darken($primary-colour, 15%) !default;
 
-$secondary-colour: colour("blue", "accent-3") !default;
+$secondary-colour: colour("red", "accent-3") !default;
 $background-colour: colour("red", "base") !default;
 
 $text-colour: colour("grey", "darken-4") !default;
