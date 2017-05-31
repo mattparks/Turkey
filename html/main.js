@@ -23,9 +23,49 @@ var pages = [
   new Page(11, "./html/11media.html", "11media", "Public optinion / media"),
   new Page(12, "./html/12events.html", "12events", "Current events"),
   new Page(13, "./html/13future.html", "13future", "Future / Questions"),
-  new Page(14, "./html/footer.html", "footer", "Footer"),
+  new Page(14, "./html/14quiz.html", "14quiz", "Quiz"),
+  new Page(15, "./html/footer.html", "footer", "Footer"),
 ];
+var currentPage = 0;
 var pagesHeight = 0;
+
+$(document).keydown(function(e) {
+  switch(e.which) {
+      case 37: {
+        // left
+        currentPage -= 1;
+        break;
+      }
+      case 38: {
+        // up
+        currentPage -= 1;
+        break;
+      }
+      case 39: {
+        // right
+        currentPage += 1;
+        break;
+      }
+      case 40: {
+        // down
+        currentPage += 1;
+        break;
+      }
+      default: {
+        return; // exit this handler for other keys
+      }
+  }
+
+  if (currentPage < 0) {
+    currentPage = 0;
+  } else if (currentPage > pages.length - 1) {
+    currentPage = pages.length - 1;
+  }
+  console.log("Scrolling: " + currentPage);
+  scrollTo(pages[currentPage]);
+
+  e.preventDefault(); // prevent the default action (scroll / move caret)
+})
 
 $(document).ready(function() {
   loadNext(0);
